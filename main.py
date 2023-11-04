@@ -2,12 +2,13 @@ import requests
 from datetime import datetime
 import smtplib
 from time import sleep
+import os
 
 MY_LATITUDE = 50.095050
 MY_LONGITUDE = 14.465340
 LOCAL_UTC_OFFSET = datetime.now().hour - datetime.utcnow().hour
 SEND_EMAIL = "robert.d.python@gmail.com"
-GMPSW = "mgtszwmykzrvkzkkx"
+GMPSW = os.environ['GMPSW']
 RECEIVE_EMAIL = "robert-dosek@seznam.cz"
 
 
